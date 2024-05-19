@@ -1,22 +1,40 @@
-import sys
-from PyQt5.QtWidgets import QApplication, QMainWindow
-from interfaz import Ui_MainWindow  # Importa la clase generada por pyuic5
+import tkinter as tk
+from tkinter import Menu
 
-class MainWindow(QMainWindow):
-    def __init__(self):
-        super().__init__()
-        self.ui = Ui_MainWindow()
-        self.ui.setupUi(self)
+# Crear la ventana principal
+root = tk.Tk()
+root.title("Ventana con Menú Desplegable")
+root.geometry("400x300")
 
-        # Aquí puedes conectar señales y slots, y añadir lógica a tu aplicación
-        # Por ejemplo:
-        # self.ui.miBoton.clicked.connect(self.miFuncion)
+# Funciones para los comandos del menú
+def nuevo_archivo():
+    print("Nuevo archivo creado")
 
-    # def miFuncion(self):
-    #     print("¡Botón presionado!")
+def abrir_archivo():
+    print("Archivo abierto")
 
-if __name__ == "__main__":
-    app = QApplication(sys.argv)
-    window = MainWindow()
-    window.show()
-    sys.exit(app.exec_())
+def guardar_archivo():
+    print("Archivo guardado")
+
+def salir():
+    root.quit()
+
+# Crear la barra de menú
+menubar = Menu(root)
+
+# Crear el menú de Archivo
+archivo_menu = Menu(menubar, tearoff=0)
+archivo_menu.add_command(label="Nuevo", command=nuevo_archivo)
+archivo_menu.add_command(label="Abrir", command=abrir_archivo)
+archivo_menu.add_command(label="Guardar", command=guardar_archivo)
+archivo_menu.add_separator()
+archivo_menu.add_command(label="Salir", command=salir)
+
+# Añadir el menú de Archivo a la barra de menú
+menubar.add_cascade(label="Clientes", menu=archivo_menu)
+
+# Mostrar la barra de menú en la ventana principal
+root.config(menu=menubar)
+
+# Ejecutar el bucle principal de la aplicación
+root.mainloop()
