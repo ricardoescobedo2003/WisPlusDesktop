@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Panel Wisplus Server</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>781</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QLabel" name="label_4">
+       <property name="text">
+        <string>Credenciales - IMPORTANTES</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_4">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <widget class="QLabel" name="label">
+           <property name="text">
+            <string>Host</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QTextEdit" name="txtHost"/>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_2">
+           <item>
+            <widget class="QLabel" name="label_2">
+             <property name="text">
+              <string>Usuario</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QTextEdit" name="txtAdmin"/>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_3">
+             <item>
+              <widget class="QLabel" name="label_3">
+               <property name="text">
+                <string>Psssword</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QTextEdit" name="txtPaswword"/>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_5">
+       <item>
+        <widget class="QPushButton" name="btnTest">
+         <property name="text">
+          <string>Test Conexion</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnInternetTest">
+         <property name="text">
+          <string>Test Internet</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuHola">
+    <property name="title">
+     <string>Clienes</string>
+    </property>
+    <addaction name="actionHola"/>
+    <addaction name="actionRed_Cliente"/>
+    <addaction name="actionUpdate_Cliente"/>
+    <addaction name="actionDelete_Cliente"/>
+   </widget>
+   <widget class="QMenu" name="menuPagos">
+    <property name="title">
+     <string>Pagos</string>
+    </property>
+    <addaction name="actionCreate_Pago"/>
+    <addaction name="actionRead_Pagos"/>
+    <addaction name="actionSearch_Pagos"/>
+    <addaction name="actionCreate_Comprobante"/>
+   </widget>
+   <widget class="QMenu" name="menuCortes">
+    <property name="title">
+     <string>Cortes</string>
+    </property>
+    <addaction name="actionCorte_x_Hora"/>
+    <addaction name="actionCorte_x_Dias"/>
+    <addaction name="actionCorte_x_Marguen"/>
+    <addaction name="actionCorte_Automatico"/>
+   </widget>
+   <widget class="QMenu" name="menuVer_Clientes">
+    <property name="title">
+     <string>Ver Clientes</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuVer_Pagos">
+    <property name="title">
+     <string>Ver Pagos</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuGestion">
+    <property name="title">
+     <string>Gestion</string>
+    </property>
+    <addaction name="actionClientes_sin_pagar"/>
+    <addaction name="actionRecaudacion_x_Marguen"/>
+    <addaction name="actionDeudas_x_Marguen"/>
+   </widget>
+   <widget class="QMenu" name="menuMicrotik">
+    <property name="title">
+     <string>Microtik</string>
+    </property>
+    <addaction name="actionReiniciar"/>
+    <addaction name="actionPing"/>
+   </widget>
+   <widget class="QMenu" name="menuHerramientas_Net">
+    <property name="title">
+     <string>Herramientas Net</string>
+    </property>
+    <addaction name="actionPing_2"/>
+    <addaction name="actionARP"/>
+    <addaction name="actionIpTrafft"/>
+    <addaction name="actionNMap"/>
+    <addaction name="actionScaneo_de_IP"/>
+   </widget>
+   <widget class="QMenu" name="menuA_cerda">
+    <property name="title">
+     <string>About</string>
+    </property>
+    <addaction name="actionInfo"/>
+   </widget>
+   <addaction name="menuHola"/>
+   <addaction name="menuPagos"/>
+   <addaction name="menuCortes"/>
+   <addaction name="menuVer_Clientes"/>
+   <addaction name="menuVer_Pagos"/>
+   <addaction name="menuGestion"/>
+   <addaction name="menuMicrotik"/>
+   <addaction name="menuHerramientas_Net"/>
+   <addaction name="menuA_cerda"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionHola">
+   <property name="text">
+    <string>Create Cliente</string>
+   </property>
+  </action>
+  <action name="actionRed_Cliente">
+   <property name="text">
+    <string>Red Cliente</string>
+   </property>
+  </action>
+  <action name="actionUpdate_Cliente">
+   <property name="text">
+    <string>Update Cliente</string>
+   </property>
+  </action>
+  <action name="actionDelete_Cliente">
+   <property name="text">
+    <string>Delete Cliente</string>
+   </property>
+  </action>
+  <action name="actionCreate_Pago">
+   <property name="text">
+    <string>Create Pago</string>
+   </property>
+  </action>
+  <action name="actionRead_Pagos">
+   <property name="text">
+    <string>Read Pagos</string>
+   </property>
+  </action>
+  <action name="actionSearch_Pagos">
+   <property name="text">
+    <string>Search Pagos</string>
+   </property>
+  </action>
+  <action name="actionCreate_Comprobante">
+   <property name="text">
+    <string>Create Comprobante</string>
+   </property>
+  </action>
+  <action name="actionCorte_x_Hora">
+   <property name="text">
+    <string>Corte x Hora</string>
+   </property>
+  </action>
+  <action name="actionCorte_x_Dias">
+   <property name="text">
+    <string>Corte x Dias</string>
+   </property>
+  </action>
+  <action name="actionCorte_x_Marguen">
+   <property name="text">
+    <string>Corte x Marguen</string>
+   </property>
+  </action>
+  <action name="actionCorte_Automatico">
+   <property name="text">
+    <string>Corte Automatico</string>
+   </property>
+  </action>
+  <action name="actionClientes_sin_pagar">
+   <property name="text">
+    <string>Clientes sin pagar</string>
+   </property>
+  </action>
+  <action name="actionRecaudacion_x_Marguen">
+   <property name="text">
+    <string>Recaudacion x Marguen</string>
+   </property>
+  </action>
+  <action name="actionDeudas_x_Marguen">
+   <property name="text">
+    <string>Deudas x Marguen</string>
+   </property>
+  </action>
+  <action name="actionReiniciar">
+   <property name="text">
+    <string>Reiniciar</string>
+   </property>
+  </action>
+  <action name="actionPing">
+   <property name="text">
+    <string>Queue</string>
+   </property>
+  </action>
+  <action name="actionPing_2">
+   <property name="text">
+    <string>Ping</string>
+   </property>
+  </action>
+  <action name="actionARP">
+   <property name="text">
+    <string>ARP</string>
+   </property>
+  </action>
+  <action name="actionIpTrafft">
+   <property name="text">
+    <string>IpTrafft</string>
+   </property>
+  </action>
+  <action name="actionNMap">
+   <property name="text">
+    <string>NMap</string>
+   </property>
+  </action>
+  <action name="actionScaneo_de_IP">
+   <property name="text">
+    <string>Scaneo de IP</string>
+   </property>
+  </action>
+  <action name="actionInfo">
+   <property name="text">
+    <string>Info</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
